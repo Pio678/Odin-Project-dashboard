@@ -75,7 +75,7 @@ body {
 }
 
 .header {
-  margin: 2rem 4rem;
+  padding: 2rem 4rem;
   background-color: white;
   grid-column: 2/3;
   grid-row: 1/2;
@@ -84,12 +84,15 @@ body {
   grid-template-rows: 2fr 3fr;
   gap: 0.5rem;
   column-gap: 2rem;
+  box-shadow: 0 0.4rem 0.6rem #d3cfcfc9;
+  z-index: 100;
 }
 
 .searchbar-container {
   display: flex;
   align-items: center;
   align-content: stretch;
+  gap: 1rem;
 }
 
 .search-button {
@@ -98,7 +101,7 @@ body {
 }
 
 .search-icon {
-  width: 3rem;
+  width: 2rem;
 }
 
 .searchbar {
@@ -138,14 +141,6 @@ body {
 }
 
 .profile-info {
-  /* display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "profile-pic profile-desc"
-    "profile-pic profile-name";
-
-  align-items: center; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -192,4 +187,86 @@ main {
   background-color: #e2e8f0;
   grid-column: 2/3;
   grid-row: 2/3;
+
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 1fr 1fr;
+
+  grid-template-areas:
+    "your-projects announcments"
+    "your-projects trending";
+}
+
+.your-projects-container {
+  grid-area: your-projects;
+  background-color: blueviolet;
+}
+
+.your-projects {
+  padding: 2rem;
+}
+
+.your-projects-header {
+  margin: 0;
+  font-size: 2.3rem;
+}
+
+.projects-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-auto-rows: 30rem;
+  gap: 3rem;
+}
+
+.project-card {
+  background-color: white;
+  box-shadow: 0.3rem 0.3rem 0.3rem rgba(198, 192, 192, 0.807);
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+
+  border-radius: 1.5rem;
+}
+
+.project-card-stripe {
+  height: 100%;
+  background-color: yellow;
+  width: 2rem;
+  border-radius: 1.5rem 0 0 1.5rem;
+}
+
+.project-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem 2rem 2rem 2rem;
+}
+.project-card-text {
+}
+
+.project-name {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.project-description {
+  font-size: 1.5rem;
+}
+
+.project-card-buttons {
+  align-self: flex-end;
+}
+
+.project-card-icon {
+  width: 4rem;
+}
+
+.announcments-container {
+  grid-area: announcments;
+  background-color: hotpink;
+}
+
+.trending-container {
+  grid-area: trending;
+  background-color: brown;
 }
