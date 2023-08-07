@@ -20,8 +20,8 @@ html {
 body {
   min-height: 100%;
   display: grid;
-  grid-template-columns: 1fr 6fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 18rem 1fr;
 }
 
 .sidebar {
@@ -45,16 +45,8 @@ body {
   font-size: 2rem;
 }
 
-.dashboard {
-  display: flex;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: 2rem;
-  font-size: 3rem;
-}
-
 .dashboard-icon {
-  width: 3.5rem;
+  height: 100%;
   filter: invert(100%);
   margin-right: 2rem;
 }
@@ -67,16 +59,33 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 700;
+  height: 2.5rem;
+  transition: 0.3s;
+}
+
+.dashboard {
+  display: flex;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  font-size: 3rem;
+  height: 3.5rem;
 }
 
 .sidebar-icon {
-  width: 2.5rem;
+  height: 100%;
   filter: invert(100%);
   margin-right: 3rem;
 }
 
+.nav-menu-item:hover,
+.settings-menu-item:hover {
+  font-size: 2.4rem;
+  height: 2.8rem;
+}
+
 .header {
-  padding: 2rem 4rem;
+  padding: 1.5rem 4rem;
   background-color: white;
   grid-column: 2/3;
   grid-row: 1/2;
@@ -125,6 +134,13 @@ body {
 .notification-button {
   border: none;
   background-color: white;
+  padding: 1.3rem;
+  border-radius: 2.8rem;
+  transition: 0.3s;
+}
+
+.notification-button:hover {
+  background-color: rgba(170, 164, 164, 0.692);
 }
 
 .notification-icon {
@@ -132,13 +148,18 @@ body {
 }
 
 .profile-picture-side {
-  height: 5.5rem;
+  height: 5.6rem;
   border-radius: 3rem;
 }
 
 .account-name-side {
   font-size: 1.8rem;
   font-weight: 700;
+  transition: 0.3s;
+}
+
+.account-name-side:hover {
+  font-size: 2rem;
 }
 
 .profile-info {
@@ -182,6 +203,11 @@ body {
   padding: 0.7rem 0;
   border: none;
   border-radius: 2rem;
+  transition: 0.3s;
+}
+
+.header-button:hover {
+  font-size: 1.6rem;
 }
 
 main {
@@ -261,6 +287,10 @@ main {
 
 .project-card-icon {
   width: 4rem;
+  transition: 0.3s;
+}
+.project-card-icon:hover {
+  width: 4.4rem;
 }
 
 .side-info-header {
